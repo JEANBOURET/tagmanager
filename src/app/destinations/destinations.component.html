@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let c of countries">
+        <a (click)="onClick(c.countryCode)">{{c.countryName}}</a>
+    </li>
+</ul>
