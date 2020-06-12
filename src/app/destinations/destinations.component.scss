@@ -1,0 +1,26 @@
+ul.dList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    li {
+        flex: 0 1;
+        padding: 2rem;
+        max-height: 300px;
+        img {
+            width: 300px;
+            height: 200px;
+        }
+        p.line-clamp {
+            overflow: hidden;
+            --max-lines: 4;
+            text-overflow: ellipsis;
+            &::before {
+                content: "...";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}

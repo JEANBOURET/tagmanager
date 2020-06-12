@@ -1,5 +1,12 @@
-<ul>
-    <li *ngFor="let c of countries">
-        <a (click)="onClick(c.countryCode)">{{c.countryName}}</a>
-    </li>
-</ul>
+<div class="container-fluid">
+    <ul class="dList">
+        <li *ngFor="let c of countries" class="">
+            <div class="card">
+                <img class="card-img-top" src="{{c.img}}" alt="México">
+                <h5 class="card-title">{{c.countryName}}</h5>
+                <p class="card-text line-clamp">{{c.description}}</p>
+                <button class="btn btn-sm btn-info col-4 align-right" (click)="onClick(c.countryCode)">Detalles</button>
+            </div>
+        </li>
+    </ul>
+</div>
